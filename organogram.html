@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organogram</title>
+    
+    <link rel="icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Poppins&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+     
+
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      
+      .organogram {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+      }
+      
+      .organogram-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #fff;
+        width: 200px;
+        height: 100px;
+      }
+      
+      .organogram-item:before {
+        content: "";
+        position: absolute;
+        top: -40px;
+        left: calc(50% - 10px);
+        width: 20px;
+        height: 20px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+      
+      .organogram-item:after {
+        content: "";
+        position: absolute;
+        bottom: -40px;
+        left: calc(50% - 10px);
+        width: 20px;
+        height: 20px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+      
+      .organogram-item:first-child:before,
+      .organogram-item:last-child:after {
+        display: none;
+      }
+      
+      .organogram-item a {
+        text-decoration: none;
+        color: #333;
+      }
+      
+      .organogram-item:hover {
+        background-color: #f1f1f1;
+      }
+
+      #logo {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+    </style>
+  </head>
+  <body>
+
+    <div id="sideNav">
+        <nav>
+            <ul>
+                <li><a href="services1.html">SERVICES</a></li>
+    
+            </ul>
+        </nav>
+      </div>
+      
+      <div id="menuBtn">
+        <img src="images/menu.png" id="menu" alt="">
+      </div>
+
+      <a href="index.html" id="logo">
+        <img src="images/caalogo.jpg" alt="LOGO" width="180">
+      </a>
+    <div class="organogram">
+      <div class="organogram-item">
+        <a href="CV/RH Mulaudzi.pdf">Chief Executive Officer</a>
+        <br>
+        <b>Mr. R.H. Mulaudzi</b>
+      </div>
+
+      <div class="organogram-item">
+        <a href="CV/Mrs LH Mulaudzi - Resume.pdf">Chief Financial Officer</a>
+        <br>
+        <b>Ms. L.H. Mulaudzi</b>
+      </div>
+      <div class="organogram-item">
+        <a href="CV/MR Mulaudzi.pdf">Legal Advisor</a>
+        <br>
+        <b>Mr. M.R. Mulaudzi</b>
+      </div>
+      <div class="organogram-item">
+        <a href="CV/Terror Tivani Mayimele CV.pdf">Business Analyst</a>
+        <br>
+        <b>Mr. T.T. Mphini</b>
+      </div>
+      <div class="organogram-item">
+        <a href="CV/Itani_Mulaudzi_CV 1.pdf">Senior Engineer</a>
+        <br>
+        <b>Mr. E.I. Mulaudzi</b>
+      </div>
+      <div class="organogram-item">
+        <a href="CV/RESUME (Moriti Ramolefo).pdf">Software Engineer</a>
+        <br>
+        <b>Mr. M. Ramolefo</b>
+      </div>
+      <div class="organogram-item">
+        <a href="CV/Brutus Mudau Updated CV.pdf">Head of Marketing</a>
+        <br>
+        <b>Mr. B.V. Mudau</b>
+      </div>
+    </div>
+
+    <div id="footer">
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100091608591979"><i class="fa fa-facebook"></i></a>
+            <a href="https://instagram.com/clickawayapplications?igshid=YmMyMTA2M2Y="><i class="fa fa-instagram"></i></a>
+            <a href="PNA.html"><i class="fa fa-twitter"></i></a>
+            <a href="https://wa.me/27646531060"><i class="fa fa-whatsapp"></i></a>
+            <p>Copyright <strong>©</strong> Click Away Application (PTY) LTD. All Rights Reserved.</p>
+        </div> 
+        </div>  
+    
+    <script>
+
+        var menuBtn = document.getElementById("menuBtn")
+        var sideNav = document.getElementById("sideNav")
+        var menu = document.getElementById("menu")
+      
+        sideNav.style.right = "-250px";
+      
+        menuBtn.onclick = function () {
+            if (sideNav.style.right == "-250px") {
+                sideNav.style.right = "0";
+                menu.src = "images/close.png"
+            } else {
+                sideNav.style.right = "-250px"
+                menu.src = "images/menu.png"
+            }
+        }
+      
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1000,
+            speedAsDuration: true
+        });
+      
+      </script>
+  </body>
+</html>
