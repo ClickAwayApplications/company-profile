@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Currently Not Available</title>
+    <link rel="stylesheet" href="homepage.css">
+    <style>
+        body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.container {
+    margin: 50px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+    </style>
+</head>
+<body>
+
+    <div id="sideNav">
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index1.html">ABOUT</a></li>
+                <li><a href="introduction1.html">INTRODUCTION</a></li>
+    
+            </ul>
+        </nav>
+      </div>
+      
+      <div id="menuBtn">
+        <img src="images/menu.png" id="menu" alt="">
+      </div>
+    <div class="container">
+        <h1>Page Under Maintenance</h1>
+        <p>We are sorry for the inconvenience, but this page is currently under maintenance.</p>
+        <p>Please check back soon.</p>
+    </div>
+
+    <script>
+
+        var menuBtn = document.getElementById("menuBtn")
+        var sideNav = document.getElementById("sideNav")
+        var menu = document.getElementById("menu")
+      
+        sideNav.style.right = "-250px";
+      
+        menuBtn.onclick = function () {
+            if (sideNav.style.right == "-250px") {
+                sideNav.style.right = "0";
+                menu.src = "images/close.png"
+            } else {
+                sideNav.style.right = "-250px"
+                menu.src = "images/menu.png"
+            }
+        }
+      
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1000,
+            speedAsDuration: true
+        });
+      
+      </script>
+</body>
+</html>
